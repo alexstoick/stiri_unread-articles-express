@@ -12,7 +12,7 @@ var mysql = mysql_lib.createPool ({
 	connectionLimit: 100
 }) ;
 
-query = "SELECT articles.url , articles.text , articles.title , 1000 * UNIX_TIMESTAMP(created_at) as date FROM articles , unread_articles WHERE articles.id = unread_articles.article_id AND unread_articles.user_id = " ;
+query = "SELECT article_id FROM unread_articles WHERE user_id = " ;
 
 app.listen(4000);
 
