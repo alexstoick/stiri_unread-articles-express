@@ -41,7 +41,10 @@ app.get ( '/read/:userid/:feedid' , function ( req , web_res ) {
 			if ( err )
 				console.log ( err ) ;
 			else
-				web_res.send ( res ) ;
+			{
+				object = { "success" => true }
+				web_res.send ( object ) ;
+			}
 			conn.end();
 		})
 	})
