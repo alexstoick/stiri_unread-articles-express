@@ -12,7 +12,7 @@ var mysql = mysql_lib.createPool ({
 	connectionLimit: 100
 }) ;
 
-query = "SELECT article_id FROM unread_articles WHERE user_id = " ;
+query = "SELECT article_id AS id FROM unread_articles WHERE user_id = " ;
 
 app.listen(4000);
 
