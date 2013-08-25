@@ -32,7 +32,7 @@ app.get ( '/unread/:id' , function ( req , web_res ) {
 	})
 })
 
-app.get ( '/read/:userid/:feedid' , function ( req , web_res ) {
+app.post ( '/read/:userid/:feedid' , function ( req , web_res ) {
 
 	mysql_set = [ req.params.userid , req.params.feedid ] ;
 
